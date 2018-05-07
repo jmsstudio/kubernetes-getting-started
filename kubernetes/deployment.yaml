@@ -1,0 +1,15 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: app-deployment
+spec:
+  template:
+    metadata:
+      labels:
+        name: application-pod
+    spec:
+      containers:
+        - name: app-container-loja
+          image: rafanercessian/aplicacao-loja:v1
+          ports:
+            - containerPort: 80
